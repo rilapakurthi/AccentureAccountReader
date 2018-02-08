@@ -24,14 +24,18 @@ public class AverageCalculatorTest {
 
 	private static final String fileDelimiter = "\\t";
 	private static final String ZIMBABWE_DOLLAR = "ZWD"; 
-	
+
+	private static final String displayMessage = "Displaying results with average in Euro(s) for ";
+	private static final String logMessage1 = displayMessage + inputFilePath1+" ... ";
+	private static final String logMessage2 = displayMessage + inputFilePath1+" ... ";
+
 	@Test
 	public void testCalculateAverageInEuroForInputFile1() throws FileNotFoundException, InvalidCurrencyException {
 		Map<String, AccountInfo> accDetailsMap = defaultFileReader.readFileToAccountDetails(inputFilePath1,fileDelimiter);
 		Map<String, AccountInfoContainer> ccrMap = ccrBuilder.buildCountryCreditRatingMap(accDetailsMap);
 		avgCalculator.calculateAverageInEuro(ccrMap);
 		System.out.println("**********************************************************************");
-		System.out.println("Displaying results with average in Euro(s) for "+inputFilePath1+" ... ");
+		System.out.println(logMessage1);
 		System.out.println("**********************************************************************");
 		displayResult(ccrMap);
 	}
@@ -42,7 +46,7 @@ public class AverageCalculatorTest {
 		Map<String, AccountInfoContainer> ccrMap = ccrBuilder.buildCountryCreditRatingMap(accDetailsMap);
 		avgCalculator.calculateAverageInEuro(ccrMap);
 		System.out.println("**********************************************************************");
-		System.out.println("Displaying results with average in Euro(s) for "+inputFilePath2+" ... ");
+		System.out.println(logMessage2);
 		System.out.println("**********************************************************************");
 		displayResult(ccrMap);
 	}
