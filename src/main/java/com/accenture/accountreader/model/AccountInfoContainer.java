@@ -5,15 +5,15 @@ import java.util.List;
 
 public class AccountInfoContainer {
 	
-	List<AccountInfo> accInfo;
+	List<AccountInfo> accInfoList;
 	BigDecimal average;
 	String avgInCurrency;
 	
-	public List<AccountInfo> getAccInfo() {
-		return accInfo;
+	public List<AccountInfo> getAccInfoList() {
+		return accInfoList;
 	}
-	public void setAccInfo(List<AccountInfo> accInfo) {
-		this.accInfo = accInfo;
+	public void setAccInfoList(List<AccountInfo> accInfoList) {
+		this.accInfoList = accInfoList;
 	}
 	public BigDecimal getAverage() {
 		return average;
@@ -29,7 +29,10 @@ public class AccountInfoContainer {
 	}
 	@Override
 	public String toString() {
-		return "AccountInfoContainer [accInfo=" + accInfo + ", average=" + average + ", avgInCurrency=" + avgInCurrency
-				+ "]";
+		return "AccountInfoContainer {\n"
+				+ "\t \t average = " + average + ",\n"
+				+ "\t \t avgInCurrency = " + avgInCurrency + ",\n "
+				+ "\t \t accInfoList = " + accInfoList + "\n \t"
+				+ "} \n \t \t";
 	}
 }

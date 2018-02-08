@@ -69,7 +69,14 @@ public class AccountInfo {
 	
 	@Override
 	public String toString() {
-		return "AccountInfo [companyCode=" + companyCode + ", accountNumber=" + accountNumber + ", city=" + city + ", country="
-				+ country + ", creditRating=" + creditRating + ", currency=" + currency + ", amount=" + amount + "]";
+		return "\n \t \t \t AccountInfo {\n"
+				+ "\t \t \t \t companyCode = " + companyCode + ",\n"
+				+ "\t \t \t \t accountNumber = " + accountNumber + ",\n"
+				+ "\t \t \t \t city = " + city + ",\n"
+				+ "\t \t \t \t country = "	+ country + ",\n"
+				+ "\t \t \t \t creditRating = " + creditRating + ",\n"
+				+ "\t \t \t \t currency = " + currency + ",\n"
+				+ "\t \t \t \t amount = " + amount + "\n" 
+				+ "\t \t \t }\n";
 	}
 }

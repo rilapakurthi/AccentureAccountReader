@@ -56,7 +56,7 @@ public class AverageCalculator implements Constants {
 		for(Entry<String,AccountInfoContainer> entrySet : ccrMap.entrySet()) {
 			sum = BigDecimal.ZERO;
 			AccountInfoContainer accInfoContainer = entrySet.getValue();
-			List<AccountInfo> accInfoList = accInfoContainer.getAccInfo();
+			List<AccountInfo> accInfoList = accInfoContainer.getAccInfoList();
 			for(AccountInfo accInfo: accInfoList) {
 				String accInfoCcy = accInfo.getCurrency().toUpperCase();
 				if(!StringUtils.equals(accInfoCcy, Currency.USD.toString())) {

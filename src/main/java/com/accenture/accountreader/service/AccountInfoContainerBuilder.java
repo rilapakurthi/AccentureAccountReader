@@ -40,11 +40,11 @@ public class AccountInfoContainerBuilder implements Constants {
 				List<AccountInfo> accInfoList = null;
 				if (countryCreditRatingMap.containsKey(newKey)) {
 					accInfoContainer = countryCreditRatingMap.get(newKey);
-					accInfoList = accInfoContainer.getAccInfo();
+					accInfoList = accInfoContainer.getAccInfoList();
 				} else {
 					accInfoContainer = new AccountInfoContainer();
 					accInfoList = new ArrayList<AccountInfo>();
-					accInfoContainer.setAccInfo(accInfoList);
+					accInfoContainer.setAccInfoList(accInfoList);
 					countryCreditRatingMap.put(newKey, accInfoContainer);
 				}
 				accInfoList.add(accInfo);
